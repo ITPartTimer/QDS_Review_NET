@@ -30,8 +30,6 @@ namespace QDS_Review_NET.DataAccess
 
                     foreach (QDSDataModel m in lstData)
                     {
-                        //Console.WriteLine(m.whs + " / "+ m.tag + " / " + m.typ + " / " + m.sts + " / " + m.ref_pfx + " / " + m.ref_no + " / " + m.qds + " / " + m.dt);
-
                         // Use parameters to insert into XLS
                         cmdText = "Insert into [NotAppv$] (WHS,TAG,INV_TYP,INV_STS,REF_PFX,REF_NO,QDS_NO,QDS_DT) Values(@whs,@tag,@typ,@sts,@pfx,@ref,@qds,@dt)";
 

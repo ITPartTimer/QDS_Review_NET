@@ -12,7 +12,7 @@ namespace QDS_Review_NET.DataAccess
 {
     public class SQLData : Helpers
     {
-        public List<EmployeesReportsModel> Get_Emp_Reports(string brh, string name)
+        public List<EmployeesReportsModel> Get_Emp_Reports(string name)
         {
             List<EmployeesReportsModel> lst = new List<EmployeesReportsModel>();
 
@@ -26,10 +26,9 @@ namespace QDS_Review_NET.DataAccess
                 conn.Open();
 
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "RPT_LKU_proc_Emails_ByBrh_ByRptName";
+                cmd.CommandText = "RPT_LKU_proc_Emails_ByRptName";
                 cmd.Connection = conn;
 
-                AddParamToSQLCmd(cmd, "@brh", SqlDbType.VarChar, 2, ParameterDirection.Input, brh);
                 AddParamToSQLCmd(cmd, "@name", SqlDbType.VarChar, 25, ParameterDirection.Input, name);
 
                 rdr = cmd.ExecuteReader();

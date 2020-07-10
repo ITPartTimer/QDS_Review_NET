@@ -110,7 +110,7 @@ namespace QDS_Review_NET
 
                 try
                 {
-                    lstEmpReports = objSQL_Rpts.Get_Emp_Reports("SW", "QDSDaily");
+                    lstEmpReports = objSQL_Rpts.Get_Emp_Reports("QDSDaily");
                 }
                 catch (Exception ex)
                 {
